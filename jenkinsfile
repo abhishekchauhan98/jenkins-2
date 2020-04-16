@@ -7,12 +7,12 @@ pipeline {
 		sh 'docker build -t 187632318301.dkr.ecr.us-east-1.amazonaws.com/abhishek-ecr:$(git rev-parse HEAD) .'
             }
         }
-        stage('pushing image to ECR') {
-            steps {
-                echo 'pushinfg image'
-		sh 'docker push 187632318301.dkr.ecr.us-east-1.amazonaws.com/abhishek-ecr:$(git rev-parse HEAD)'
-            }
-        }
+        // stage('pushing image to ECR') {
+        //     steps {
+        //         echo 'pushing image'
+		// sh 'docker push 187632318301.dkr.ecr.us-east-1.amazonaws.com/abhishek-ecr:$(git rev-parse HEAD)'
+        //     }
+        // }
         // stage('Deploying on eks') {
         //     steps {
         //         	echo 'deploying on eks'
